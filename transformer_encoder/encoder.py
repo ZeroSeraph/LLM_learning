@@ -57,11 +57,11 @@ class MHA(nn.Module):
         att=self.dropout(att)
         
         res=att@v   # res_shape: batchsize,n_head,seq_len,per_head_embed
-        res=res.transpose(1,2).congituous().view(batchsize,seq_len,n_embed)
+        res=res.transpose(1,2).contiguous().view(batchsize,seq_len,n_embed)
         res=self.proj(res)
         res=self.dropout(res)
               
-        return x
+        return res
         
 # Block
 class encoder(nn.Module):
