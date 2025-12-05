@@ -1,1 +1,1 @@
-参考gpt的实现，下面搭建bert模型
+参考gpt的实现，下面搭建encoder模块
